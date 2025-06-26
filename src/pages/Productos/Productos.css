@@ -1,0 +1,231 @@
+.buy-button {
+    background-color: #a236ac;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: var(--hover-color);
+}
+
+.promo-code {
+    margin-top: 10px;
+}
+
+.promo-code input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.quantity-controls {
+    display: flex; 
+    align-items: center; 
+    margin-top: 10px; 
+}
+
+.quantity-btn {
+    background-color: #a236ac; 
+    color: #ffffff; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
+    cursor: pointer; 
+    margin: 0 5px; 
+}
+.quantity-btn:hover{
+    background-color: var(--hover-color);
+}
+
+.quantity {
+    margin: 0 10px; 
+    font-size: 1.2rem; 
+}
+
+.add-to-cart-button {
+    background-color: #a236ac; 
+    color: #ffffff; 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-top: 10px; 
+    transition: background-color 0.3s ease; 
+}
+
+.back-button {
+    color: #a236ac;
+}
+
+.add-to-cart-button:hover {
+    background-color: var(--hover-color); 
+}
+
+.promo-code input {
+    width: 100%; 
+    max-width: 200px; 
+    padding: 10px; 
+    border: 1px solid #eaeaea; 
+    border-radius: 5px; 
+    margin-top: 5px; 
+}
+
+.product-description {
+    text-align: justify; 
+    margin: 20px 0; 
+}
+
+.product-description ul {
+    list-style-type: none; 
+    padding: 0; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: left; 
+}
+
+.product-description li {
+    margin: 10px 0; 
+    text-align: center; 
+    display: flex; 
+    align-items: center; 
+}
+
+.product-description li i {
+    margin-right: 8px; 
+    color: var(--hover-color);
+}
+
+.product-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5%;
+}
+
+.product-detail > .box-2 {
+    flex: 0 0 30%;
+}
+
+.product-detail > .box-1 {
+    flex: 1;
+    text-align: justify;
+}
+
+.box-2 img {
+    width: 100%;
+    height: auto;
+}
+
+.sidebar {
+    display: none;
+}
+
+/* CARROUSSEL */
+
+.carousel-container {
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+}
+
+/* Slides */
+.slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.slide p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.navigation label {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navigation label:hover {
+    background-color: #333;
+}
+
+
+#slide1:checked ~ .slides {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+
+#slide1:checked ~ .navigation label[for="slide1"],
+#slide2:checked ~ .navigation label[for="slide2"],
+#slide3:checked ~ .navigation label[for="slide3"] {
+    background-color: #333;
+}
+
+
+input[type="radio"] {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .product-detail {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .product-detail > .box-2 {
+        margin-bottom: 20px; 
+    }
+
+    .product-detail > .box-1 {
+        width: 100%; 
+    }
+}
+
+main {
+    padding: 0 100px; 
+}

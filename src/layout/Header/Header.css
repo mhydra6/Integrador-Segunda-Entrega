@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: #969494;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0 1rem;
+}
+
+.input-burger {
+  display: none;
+}
+
+.burger-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.burger {
+  width: 26px;
+  height: 3px;
+  background: #000;
+  position: relative;
+}
+
+.burger::before,
+.burger::after {
+  content: '';
+  width: 26px;
+  height: 3px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+.burger::before {
+  top: -8px;
+}
+
+.burger::after {
+  top: 8px;
+}
+
+.input-burger:checked + .burger-container .burger {
+  background: transparent;
+}
+
+.input-burger:checked + .burger-container .burger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.input-burger:checked + .burger-container .burger::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.logo .nav-logo {
+  width: 60px;
+  height: 60px;
+}
+
+.main-nav {
+  position: fixed;
+  top: 60px;
+  left: -300px;
+  width: 300px;
+  background: #fff;
+  height: 100vh;
+  transition: 0.3s ease;
+}
+
+.input-burger:checked ~ .main-nav {
+  left: 0;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 1rem;
+}
+
+.nav-item {
+  margin-bottom: 1rem;
+}
+
+.nav-link {
+  color: #000;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.nav-link:hover {
+  background: #aa62c7;
+  color: #fff;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.cart-container {
+  color: #000;
+  font-size: 20px;
+  margin-right: 0.5rem;
+}
+
+.picture-container .user-picture {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Desktop nav */
+@media (min-width: 900px) {
+  .burger-container {
+    display: none;
+  }
+  .main-nav {
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  .nav-list {
+    display: flex;
+    padding: 0;
+  }
+  .nav-item {
+    margin: 0;
+  }
+  .nav-link {
+    padding: 1rem;
+  }
+}
+

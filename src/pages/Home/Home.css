@@ -1,0 +1,155 @@
+
+    .main-container{
+        padding: 1rem;
+        flex-grow: 1;
+    }
+
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        padding: 1rem;
+
+        .card {
+            flex-basis: 240px;
+        }
+    }
+
+    .card {
+        width: 240px;
+        color: var(--primary-color);
+        font-size: 14px;
+        
+
+        &:hover {
+            .card-content {
+                .card-add {
+                    transform: translateY(0);
+                    background-color:#aa62c7;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .card-content {
+            display: flex;
+            position: relative;
+            overflow: hidden;
+
+            .card-image {
+                width: 100%;
+                aspect-ratio: 0.6 / 1;
+                object-fit: cover;
+                object-position: bottom;
+            }
+
+            .card-icon-container {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .icon-circle {
+                    background-color: #86117d;
+                    color: #000000;
+                    width: 36px;
+                    height: 36px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: background-color .25s ease-in-out, color .25s ease-in-out;
+                    &:hover {
+                        background-color: grey;
+                        color: #ffffff;
+                        box-shadow: 0 0 5px #88252526;
+                    }
+                }
+            }
+            .fa-regular.fa-eye{
+                color: white;
+                font-size: 20px;
+            }
+            .card-status {
+                position: absolute;
+                background-color:#aa62c7;
+                padding: 3px 6px;
+                border-radius: 2px;
+                color: #ffffff;
+                top: 10px;
+                left: 10px;
+                font-size: 10px;
+            }
+
+            .card-add {
+                padding: 1rem 1.5rem;
+                background-color:grey;
+                color: #ffffff;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                border-radius: 2px;
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                transform: translateY(65px);
+                opacity: 0;
+                transition: background-color .25s ease-in-out, transform .4s ease-in-out, opacity .25s ease-in-out;
+                &:hover {
+                    background-color:grey;
+                }
+            }
+        }
+        .card-info {
+    padding: .75em;
+    color: #ffffff;
+
+    .card-title {
+        font-size: 1em;
+        text-align: center;
+        font-weight: 500;
+        line-height: 18px;
+        margin-bottom: 5px;
+    }
+
+    .card-rate {
+        font-size: .75em;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 6px;
+
+        .card-review {
+            color: black;
+        }
+    }
+
+    .card-price {
+        font-size: 1.25em;
+        text-align: center;
+        font-weight: 500;
+        margin-top: .5rem;
+    }
+}
+
+    .box-shadow {
+        padding: 1rem;
+        margin: 2rem;
+        border: 1px solid #f0f0f0;
+        visibility: hidden;
+        box-shadow: 0 0 5px 1px #0000004a;
+
+
+    .text {
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        color: #606060;
+        text-shadow: 1px 1px 2px #000000;
+        padding: 2rem;
+    }}}

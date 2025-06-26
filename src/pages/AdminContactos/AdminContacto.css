@@ -1,0 +1,97 @@
+.contact-table {
+  border-collapse: collapse;
+  width: calc(100% - 60px);
+  margin: 10px auto;
+}
+
+.contact-table th,
+.contact-table td {
+  padding: 10px;
+  text-align: left;
+  border: 2px solid #a236ac;
+}
+
+.contact-table th {
+  background-color: #a236ac;
+  color: #ffffff;
+}
+
+.contact-table img {
+  max-width: 50px;
+  border-radius: 50%; /* si algún día pones avatar */
+}
+
+.edit-btn,
+.delete-btn {
+  background-color: #c3ebb1;
+  color: #111111;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #f50303;
+  color: #ffffff;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+
+.buttons button {
+  background-color: #a236ac;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.buttons button:hover {
+  background-color: var(--hover-color);
+}
+
+main h1 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: fit-content;
+}
+
+@media (max-width: 768px) {
+  .buttons {
+    justify-content: center;
+  }
+
+  .contact-table {
+    font-size: 14px;
+  }
+
+  main h1 {
+    font-size: 24px;
+  }
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.edit-btn {
+  background-color: #c3ebb1;
+  color: #111111;
+}
+
+.delete-btn {
+  background-color: #f50303;
+  color: #ffffff;
+}

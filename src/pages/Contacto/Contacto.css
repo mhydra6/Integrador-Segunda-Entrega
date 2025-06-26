@@ -1,0 +1,132 @@
+
+
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.contact-form,
+.map {
+    flex: 1 1 300px;
+    max-width: 600px;
+}
+
+main {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.contact-form,
+.map {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    flex: 1;
+}
+
+.contact-form h2,
+.map h3 {
+    text-align: center;
+    color: black;
+}
+
+.contact-form label {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-top: 7px;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.contact-form button {
+    width: 100%;
+    background-color: #a236ac;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--hover-color);
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .contact-form {
+        order: 1;
+        width: 90%;
+    }
+
+    .map {
+        order: 2;
+        width: 90%;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .contact-form {
+        width: 48%;
+        margin-right: 20px;
+    }
+
+    .map {
+        width: 48%;
+    }
+}
+
+.footer {
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.main-header {
+    width: 100%;
+    margin: 0;
+    background-color: #fff;
+}
